@@ -1,14 +1,37 @@
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <nav style={{ padding: '10px', backgroundColor: '#282c34', display:'flex', justifyContent:'center' }}>
-      <Link to="/" style={{ margin: '10px' }}>Home</Link>
-      <Link to="/about" style={{ margin: '10px' }}>About</Link>
-      <Link to="/services" style={{ margin: '10px' }}>Services</Link>
-      <Link to="/contact" style={{ margin: '10px' }}>Contact</Link>
-    </nav>
-  );
+    <> 
+        <nav style={{
+              backgroundColor: "#61dafbaa",
+              display: "flex",
+              justifyContent: "space-between", // Adjust spacing between h3 and links
+              alignItems: "center", // Align items vertically centered
+              padding: "20px",
+              fontSize: "1.5em",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
+            }}>
+
+            <h3 style={{ 
+              display: "flex", 
+              color: "#646cff" }}>Abdul<em><span style={{ 
+              color: "grey" }}>basit</span></em>
+            </h3>
+      
+            <div style={{ 
+              display: "flex", 
+              gap: "10px" }}>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/contact">Contacts</Link>
+            </div>
+        </nav>
+    </>
+   
+  )
 }
 
-export default Navbar;
+export default Navbar
